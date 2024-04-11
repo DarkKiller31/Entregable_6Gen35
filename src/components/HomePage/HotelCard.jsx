@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom"
 import './styles/HotelCard.css'
+import Stars from "./Stars"
 
 const HotelCard = ({ hotel }) => {
 
@@ -16,7 +17,7 @@ const HotelCard = ({ hotel }) => {
       </header>
       <section className="card__info">
         <h3 className="card__name">{hotel.name}</h3>
-        <p className="card__rating">{hotel.rating}</p>
+        <p className="card__rating"><Stars score={+hotel?.rating} />{hotel.rating}</p>
         <span className="card__location">{hotel.city.name}, {hotel.city.country}</span>
         <div className="card__price">$ {hotel.price}</div>
       </section>
