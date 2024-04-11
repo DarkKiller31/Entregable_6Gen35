@@ -1,0 +1,74 @@
+.resCard__container {
+  display: flex;
+  border-radius: 1em;
+  box-shadow: 0 0 0.5em 0.5em #99740420;
+  margin: 1.5em;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.2em;
+  padding-right: 1em;
+}
+.resCard__header {
+  width: 9em;
+  
+}
+.resCard__img {
+  width: 100%;
+  border-radius: 1em 0em 0em 1em;
+}
+.resCard__rate {
+  color: #997404;
+  cursor: pointer;
+  &:hover {
+    color: rgb(15, 15, 104);
+  }
+}
+.resCard__list {
+  display: flex;
+  gap: 1em;
+}
+.resCard__reserve {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.resCard__item {
+  font-size: 0.8em;
+  font-weight: 600;
+}
+.resCard__value {
+  font-weight: 700;
+}
+.resCard__btn {
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 0.5em;
+  margin-top: 1em;
+  &:hover {
+    background-color: rgb(194, 5, 5);
+  }
+}
+
+@media (max-width: 768px) {
+  .resCard__container {
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 20em;
+    padding-right: 0;
+    padding-bottom: 1em;
+  }
+  .resCard__header {
+    width: 100%;
+  }
+  .resCard__img {
+    width: 100%;
+    border-radius: 1em 1em 0em 0em;
+  }
+  .resCard__info {
+    padding: 0em 1.5em;
+  }
+  .resCard__btn {
+    margin: 0;
+  }
+}

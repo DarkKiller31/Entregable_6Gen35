@@ -1,0 +1,30 @@
+.review__close {
+  transform: scale(0);
+}
+.review__content {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: #0002;
+  backdrop-filter: blur(2px);
+  display: grid;
+  place-content: center;
+  transition: transform 150ms ease;
+}
+.form__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: white;
+  padding: 2em;
+  border-radius: 1em;
+
+}
+.formRev__img {
+  width: 20em;
+  border-radius: 1em;
+}

@@ -1,0 +1,17 @@
+.other__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  width: 100%;
+}
+.other__title {
+  font-size: 1.5em;
+  font-weight: 800;
+}
+.other__cards {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

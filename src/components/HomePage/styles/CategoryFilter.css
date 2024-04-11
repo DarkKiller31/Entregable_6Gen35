@@ -1,0 +1,34 @@
+.filterCity__container {
+  margin-top: 1em;
+  background-color: aquamarine;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255);
+  padding: 1.2em;
+  padding-bottom: 0;
+  border-radius: 1em;
+  box-shadow: 0 0 0.5em 0.1em #99740420;
+}
+.filterCity__list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  padding-bottom: 1em;
+  width: 80%;
+}
+.filterCity__cities {
+  cursor: pointer;
+  border: 2px solid #997404;
+  border-radius: 1em;
+  padding: 0.1em 0.9em;
+  transition: transform 150ms ease;
+  &:hover {
+    transform: scale(1.05);
+    background-color: #997404;
+    color: white;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,11 @@
+.revPage__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0em 2em;
+  justify-content: center;
+  align-items: center;
+}
+.revPage__title {
+  color: #997404;
+  font-size: 2em;
+}
