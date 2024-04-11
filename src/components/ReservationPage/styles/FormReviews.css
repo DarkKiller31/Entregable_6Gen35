@@ -13,6 +13,22 @@
   place-content: center;
   transition: transform 150ms ease;
 }
+.review__header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.review__title {
+  color: #997404;
+  font-size: 1.5em;
+  font-weight: 800;
+  margin-left: 4em;
+}
+.reviewHe__close{
+  color: red;
+  font-size: 1.2em;
+  cursor: pointer;
+}
 .form__card {
   display: flex;
   flex-direction: column;
@@ -27,4 +43,12 @@
 .formRev__img {
   width: 20em;
   border-radius: 1em;
+}
+.review__name {
+  font-size: 1.1em;
+  font-weight: 900;
+}
+.review__country {
+  font-weight: 800;
+  margin-bottom: 0.5em;
 }

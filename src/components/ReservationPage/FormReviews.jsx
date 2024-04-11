@@ -17,23 +17,29 @@ const FormReviews = ({ reserveSelected, setReserveSelected, formIsClose, setForm
     setFormIsClose(true)
   }
 
+  const close = () => {
+    setFormIsClose(true)
+  }
   return (
     <article className={`review__content ${formIsClose && 'review__close'}`}>
       <div className="form__card">
-        <h3>Reserve</h3>
+        <div className="review__header">
+          <h3 className="review__title">Reserve</h3>
+          <h2 className="reviewHe__close" onClick={close}>X</h2>
+        </div>
         <section>
           <header>
             <img className="formRev__img" src={reserveSelected?.hotel.images[0].url} alt="" />
           </header>
-          <h4>{reserveSelected?.hotel.name}</h4>
-          <p>
+          <h4 className="review__name">{reserveSelected?.hotel.name}</h4>
+          <p className="review__country">
             {reserveSelected?.hotel.city.name},{" "}
             {reserveSelected?.hotel.city.country}
           </p>
           <ul>
             <li>
               <span>Reservation Days</span>
-              <span>{reserveSelected?.reservationsDays}</span>
+              <span>{reserveSelected?.reservationDays}</span>
             </li>
             <li>
               <span>subtotal Price</span>
