@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import CategoryFilter from "../components/HomePage/CategoryFilter";
 import PriceFilter from "../components/HomePage/PriceFilter";
 import { BsSearch } from "react-icons/bs";
+import { IoFilter } from "react-icons/io5";
 
 const HomePages = () => {
   const [inputName, setInputName] = useState("");
@@ -12,6 +13,9 @@ const HomePages = () => {
     from: 0,
     to: Infinity
   })
+
+  const [openFilter, setOpenFilter] = useState(false)
+
 
   const hotels = useSelector((states) => states.hotels);
 
@@ -35,19 +39,29 @@ const HomePages = () => {
     return filterName && filterPrice;
   };
 
+  const handleOpen = () => {
+    setOpenFilter(true)
+    if(openFilter){
+      setOpenFilter(false)
+    }
+  }
+
   return (
     <div className="home__content">
-      <div className="search__cities">
-        <BsSearch className="search__icon" />
-        <input className="search__input"
-          onChange={handleChange}
-          value={inputName}
-          ref={inputValue}
-          type="text"
-          placeholder="Search.."
-        />
+      <div className="searchAndFilter">
+        <div className="search__cities">
+          <BsSearch className="search__icon" />
+          <input className="search__input"
+            onChange={handleChange}
+            value={inputName}
+            ref={inputValue}
+            type="text"
+            placeholder="Search.."
+          />
+        </div>
+        <IoFilter className="filters" onClick={handleOpen}/>
       </div>
-      <aside className="home__filters">
+      <aside className={`home__filters ${openFilter ?'filter__open' : ''}`}>
         <h2 className="home__title">Filters</h2>
         <PriceFilter 
           setFromTo={setFromTo} 

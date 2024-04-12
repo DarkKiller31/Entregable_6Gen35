@@ -6,11 +6,15 @@
             "b c c c" / 0.5fr 1fr 1fr 0.5fr;
   align-self: center;
 }
-.search__cities{
+.searchAndFilter {
   grid-column: 2 / 4;
   grid-row: 1 / 2;
-  justify-self: center;
-  align-self: center;
+  display: flex;
+  justify-content: center;
+  gap: 0.5em;
+  padding: 0em, 1em;
+}
+.search__cities{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +25,11 @@
   border-radius: 45px;
   gap: 0.5em;
   box-shadow: 0 0 0.5em 0.5em #99740412;
+}
+.filters {
+  display: none;
+  font-size: 2em;
+  color: #997404;
 }
 .search__icon {
   font-size: 1.2em;
@@ -59,4 +68,28 @@
   flex-wrap: wrap;
   align-self: center;
   justify-content: center;
+}
+@media (max-width: 576px) {
+  .home__cards {
+    grid-column: 1 / 5;
+  }
+  .home__filters {
+    display: none;
+  }
+  .searchAndFilter {
+    grid-column: 1 / 5;
+  }
+  .filters {
+    display: flex;
+  }
+  .filter__open {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 1 / 5;
+    background-color: rgba(255, 255, 255, 0.757);
+    width: 100%;
+    top: 10em;
+    padding-bottom: 3em;
+  }
 }
