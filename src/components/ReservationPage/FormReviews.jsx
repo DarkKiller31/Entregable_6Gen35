@@ -27,8 +27,8 @@ const FormReviews = ({ reserveSelected, setReserveSelected, formIsClose, setForm
           <h3 className="review__title">Reserve</h3>
           <h2 className="reviewHe__close" onClick={close}>X</h2>
         </div>
-        <section>
-          <header>
+        <section className="review_container">
+          <header className="review__header">
             <img className="formRev__img" src={reserveSelected?.hotel.images[0].url} alt="" />
           </header>
           <h4 className="review__name">{reserveSelected?.hotel.name}</h4>
@@ -37,20 +37,20 @@ const FormReviews = ({ reserveSelected, setReserveSelected, formIsClose, setForm
             {reserveSelected?.hotel.city.country}
           </p>
           <ul>
-            <li>
-              <span>Reservation Days</span>
-              <span>{reserveSelected?.reservationDays}</span>
+            <li className="contRev">
+              <span className="review__item">Reservation Days</span>
+              <span className="review__value">{reserveSelected?.reservationDays}</span>
             </li>
-            <li>
-              <span>subtotal Price</span>
-              <span>{reserveSelected?.subtotal}</span>
+            <li className="contRev">
+              <span className="review__item">subtotal Price</span>
+              <span className="review__value">{reserveSelected?.subtotal}</span>
             </li>
           </ul>
         </section>
-        <form onSubmit={handleSubmit(submit)}>
-          <label>
-            <span>Rating</span>
-            <select {...register('rating')} >
+        <form className="review__form" onSubmit={handleSubmit(submit)}>
+          <label className="review__label">
+            <span className="label__items">Rating</span>
+            <select className="label__values" {...register('rating')} >
               <option value="5">⭐⭐⭐⭐⭐</option>
               <option value="4">⭐⭐⭐⭐</option>
               <option value="3">⭐⭐⭐</option>
@@ -58,11 +58,11 @@ const FormReviews = ({ reserveSelected, setReserveSelected, formIsClose, setForm
               <option value="1">⭐</option>
             </select>
           </label>
-          <label>
-            <span>Comments</span>
-            <textarea {...register('comment')} />
+          <label className="review__label">
+            <span className="label__items">Comments</span>
+            <textarea className="label__values texts" {...register('comment')} />
           </label>
-          <button>Submit</button>
+          <button className="card__btn review__btn">Submit</button>
         </form>
       </div>
     </article>
