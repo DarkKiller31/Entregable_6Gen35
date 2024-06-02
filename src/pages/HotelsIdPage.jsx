@@ -17,7 +17,6 @@ const HotelsIdPage = () => {
     getHotel();
   }, [id]);
 
-  console.log(hotel)
 
 
   return (
