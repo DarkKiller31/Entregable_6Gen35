@@ -7,7 +7,7 @@ const UseAuth = () => {
   
   // Register
   const registerUser = (data) => {
-    const url = 'https://hotels-api.academlo.tech/users'
+    const url = 'https://booking-app-rtjk.onrender.com/users'
     axios.post(url, data)
       .then(res => {
         console.log(res.data)
@@ -17,7 +17,7 @@ const UseAuth = () => {
   }
   // Login
   const loginUser = (data) => {
-    const url = 'https://hotels-api.academlo.tech/users/login'
+    const url = 'https://booking-app-rtjk.onrender.com/users/login'
     axios.post(url, data)
     .then(res => {
       console.log(res.data)

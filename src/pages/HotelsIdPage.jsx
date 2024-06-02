@@ -10,7 +10,7 @@ import './styles/HotelsIdPage.css'
 const HotelsIdPage = () => {
   const { id } = useParams();
 
-  const url = `https://hotels-api.academlo.tech/hotels/${id}`;
+  const url = `https://booking-app-rtjk.onrender.com/hotels/${id}`;
   const [hotel, getHotel] = useFetch(url);
 
   useEffect(() => {
